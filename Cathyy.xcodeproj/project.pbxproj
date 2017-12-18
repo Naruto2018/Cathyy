@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C881AB2E9D7716B0CFC1DB9 /* libPods-Cathyy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE2DEC261638895B0B1DFB5 /* libPods-Cathyy.a */; };
 		6F01136D1FE7FEF300DED1D9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F01136C1FE7FEF300DED1D9 /* AppDelegate.m */; };
 		6F0113701FE7FEF300DED1D9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F01136F1FE7FEF300DED1D9 /* ViewController.m */; };
 		6F0113731FE7FEF300DED1D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F0113711FE7FEF300DED1D9 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E98311D6D9893A3083AD5E8 /* Pods-Cathyy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cathyy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cathyy/Pods-Cathyy.debug.xcconfig"; sourceTree = "<group>"; };
 		6F0113681FE7FEF300DED1D9 /* Cathyy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cathyy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F01136B1FE7FEF300DED1D9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6F01136C1FE7FEF300DED1D9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +53,8 @@
 		6F01138B1FE7FEF400DED1D9 /* CathyyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CathyyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F01138F1FE7FEF400DED1D9 /* CathyyUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CathyyUITests.m; sourceTree = "<group>"; };
 		6F0113911FE7FEF400DED1D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7EE2DEC261638895B0B1DFB5 /* libPods-Cathyy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Cathyy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1A67D630F5784F68CFCEB32 /* Pods-Cathyy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cathyy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cathyy/Pods-Cathyy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C881AB2E9D7716B0CFC1DB9 /* libPods-Cathyy.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E2EED1833FB14FF56973376 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7EE2DEC261638895B0B1DFB5 /* libPods-Cathyy.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6F01135F1FE7FEF300DED1D9 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +98,8 @@
 				6F0113831FE7FEF400DED1D9 /* CathyyTests */,
 				6F01138E1FE7FEF400DED1D9 /* CathyyUITests */,
 				6F0113691FE7FEF300DED1D9 /* Products */,
+				BBD3A1010D4ACECA7EDCE380 /* Pods */,
+				1E2EED1833FB14FF56973376 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +147,15 @@
 			path = CathyyUITests;
 			sourceTree = "<group>";
 		};
+		BBD3A1010D4ACECA7EDCE380 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0E98311D6D9893A3083AD5E8 /* Pods-Cathyy.debug.xcconfig */,
+				D1A67D630F5784F68CFCEB32 /* Pods-Cathyy.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +163,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6F0113941FE7FEF400DED1D9 /* Build configuration list for PBXNativeTarget "Cathyy" */;
 			buildPhases = (
+				EF17F1782328D8F48EA1833A /* [CP] Check Pods Manifest.lock */,
 				6F0113641FE7FEF300DED1D9 /* Sources */,
 				6F0113651FE7FEF300DED1D9 /* Frameworks */,
 				6F0113661FE7FEF300DED1D9 /* Resources */,
+				7F7536EAB6F7526EB52E9F50 /* [CP] Embed Pods Frameworks */,
+				7B27BFB4DC78B7106FC7BE1A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -259,6 +286,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7B27BFB4DC78B7106FC7BE1A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Cathyy/Pods-Cathyy-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cathyy/Pods-Cathyy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F7536EAB6F7526EB52E9F50 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cathyy/Pods-Cathyy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF17F1782328D8F48EA1833A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Cathyy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6F0113641FE7FEF300DED1D9 /* Sources */ = {
@@ -428,6 +511,7 @@
 		};
 		6F0113951FE7FEF400DED1D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E98311D6D9893A3083AD5E8 /* Pods-Cathyy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -441,6 +525,7 @@
 		};
 		6F0113961FE7FEF400DED1D9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1A67D630F5784F68CFCEB32 /* Pods-Cathyy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
