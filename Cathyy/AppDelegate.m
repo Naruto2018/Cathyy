@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "VCHome.h"
+#import "VCBbs.h"
 
 @interface AppDelegate ()
 
@@ -17,9 +19,49 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    //创建窗口对象
+    [NSThread sleepForTimeInterval:3.0]; //设置启动页面时间,系统默认1秒
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    VCHome* vcHome = [[VCHome alloc] init];
+    VCBbs* vcBbs = [[VCBbs alloc] init];
+    
+    //设置控制器标题
+    vcHome.title = @"主页";
+    vcBbs.title = @"论坛";
+    
+    UINavigationController* navHome = [[UINavigationController alloc] initWithRootViewController:vcHome];
+    UINavigationController* navBbs = [[UINavigationController alloc] initWithRootViewController:vcBbs];
+    
+    //创建控制器数组
+    NSArray* vcArry = [NSArray arrayWithObjects:navHome, navBbs,nil];
+    //创建分栏控制器
+    UITabBarController* tbcVc = [[UITabBarController alloc] init];
+    tbcVc.viewControllers = vcArry;
+    
+    tbcVc.selectedIndex = 0;
+    if (tbcVc.selectedViewController == navHome) {
+        NSLog(@"选中0");
+    }
+    tbcVc.tabBar.translucent = NO;
+    
+    self.window.rootViewController = tbcVc;
+     self.window.backgroundColor = [UIColor whiteColor];
+    //设置主窗口并显示
+    [self.window makeKeyAndVisible];
+    
+    [self _enteranceControl:launchOptions];
     return YES;
 }
 
+-(void)_enteranceControl:(NSDictionary *)launchOptions{
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
+    [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
+    [SVProgressHUD setBackgroundColor:[UIColor blackColor]];
+    [SVProgressHUD setForegroundColor:[UIColor whiteColor]];
+    
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
