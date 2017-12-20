@@ -29,6 +29,7 @@
 		6F1BFE911FE96FFF0088D62B /* f2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F1BFE8C1FE96FFE0088D62B /* f2.png */; };
 		6F1BFE921FE96FFF0088D62B /* f1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F1BFE8D1FE96FFF0088D62B /* f1.png */; };
 		6F1BFE941FE970060088D62B /* IMG_1413.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 6F1BFE931FE970060088D62B /* IMG_1413.JPG */; };
+		6FED76571FEA853C00B13319 /* HomeTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FED76561FEA853C00B13319 /* HomeTableCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,8 @@
 		6F1BFE8C1FE96FFE0088D62B /* f2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = f2.png; sourceTree = "<group>"; };
 		6F1BFE8D1FE96FFF0088D62B /* f1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = f1.png; sourceTree = "<group>"; };
 		6F1BFE931FE970060088D62B /* IMG_1413.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1413.JPG; sourceTree = "<group>"; };
+		6FED76551FEA853C00B13319 /* HomeTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeTableCell.h; sourceTree = "<group>"; };
+		6FED76561FEA853C00B13319 /* HomeTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeTableCell.m; sourceTree = "<group>"; };
 		7EE2DEC261638895B0B1DFB5 /* libPods-Cathyy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Cathyy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1A67D630F5784F68CFCEB32 /* Pods-Cathyy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cathyy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cathyy/Pods-Cathyy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -205,6 +208,8 @@
 		6F1BF71A1FE935950088D62B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6FED76551FEA853C00B13319 /* HomeTableCell.h */,
+				6FED76561FEA853C00B13319 /* HomeTableCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -451,6 +456,7 @@
 				6F1BF7201FE9365C0088D62B /* VCBbs.m in Sources */,
 				6F1BF7291FE9573A0088D62B /* MovieListModel.m in Sources */,
 				6F01136D1FE7FEF300DED1D9 /* AppDelegate.m in Sources */,
+				6FED76571FEA853C00B13319 /* HomeTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

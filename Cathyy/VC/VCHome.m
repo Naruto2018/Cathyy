@@ -11,6 +11,7 @@
 #import <AFNetworking.h>
 #import <MJRefresh.h>
 #import <UIImageView+WebCache.h>
+#import "HomeTableCell.h"
 
 NSString *const cellstr = @"Cell";
 @interface VCHome ()
@@ -45,42 +46,56 @@ NSString *const cellstr = @"Cell";
     return 1;
 }
 
--(UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+-(UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
    // _cell = [_tab dequeueReusableCellWithIdentifier:cellstr forIndexPath:indexPath];
     
-         _cell = [_tab dequeueReusableCellWithIdentifier:cellstr];
+//         _cell = [_tab dequeueReusableCellWithIdentifier:cellstr];
+//
+//        if (_cell == nil) {
+//            //创建一个单元格对象
+//            //1 单元格样式
+//            //2 单元格复用标记
+//            //cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:str];
+//            _cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellstr];
+//        }
     
-        if (_cell == nil) {
-            //创建一个单元格对象
-            //1 单元格样式
-            //2 单元格复用标记
-            //cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:str];
-            _cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellstr];
-        }
-
-    MovieListModel* MovieList = [_Data objectAtIndex:indexPath.row];
+    //HomeTableCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([HomeTableCell class]) forIndexPath:indexPath];
     
-    NSString* title = [NSString stringWithFormat:@"名字 %@",MovieList.title];
-    
-    _imageView = [[UIImageView alloc] init];
-    [_imageView setFrame:CGRectMake(150, 5, 90, 90)];
-    [_cell.contentView addSubview:_imageView];
-    
-    UIImage *image = [[SDImageCache sharedImageCache] imageFromDiskCacheForKey:MovieList.img ];
-    if (image) {
-        _imageView.image = image;
-    } else {
-        [_imageView sd_setImageWithURL:[NSURL URLWithString:MovieList.img ] placeholderImage:[UIImage imageNamed:@"IMG_1413.JPG"]];
+    HomeTableCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([HomeTableCell class])];
+    if (!cell) {
+        cell = [[HomeTableCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:NSStringFromClass([HomeTableCell class])];
     }
-    
-    _cell.textLabel.text = title;
-    return _cell;
+
+    cell.model = _Data[indexPath.row];
+    return cell;
+
+//    MovieListModel* MovieList = [_Data objectAtIndex:indexPath.row];
+//
+//    NSString* title = [NSString stringWithFormat:@"名字 %@",MovieList.title];
+//
+//    _imageView = [[UIImageView alloc] init];
+//    [_imageView setFrame:CGRectMake(150, 5, 90, 90)];
+//    [_cell.contentView addSubview:_imageView];
+//
+//    UIImage *image = [[SDImageCache sharedImageCache] imageFromDiskCacheForKey:MovieList.img ];
+//    if (image) {
+//        _imageView.image = image;
+//    } else {
+//        [_imageView sd_setImageWithURL:[NSURL URLWithString:MovieList.img ] placeholderImage:[UIImage imageNamed:@"IMG_1413.JPG"]];
+//    }
+//
+//    _cell.textLabel.text = title;
+    //return _cell;
 }
 
 //获取高度
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 80;
+    return 580;
+}
+
+-(Class)cellRegisterClass{
+    return [HomeTableCell class];
 }
 
 -(void)setRefreshBlock:(GloableBlock)refreshBlock{

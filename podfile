@@ -11,4 +11,5 @@ target  'Cathyy' do
     pod 'YYWebImage', '~> 1.0.5'
     pod 'YYText', '~> 1.0.7'
     pod 'YYModel', '~> 1.0.4'
+    pod 'Masonry', '~> 1.1.0'
 end
